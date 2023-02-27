@@ -10,7 +10,8 @@ function App() {
   const loader = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(true);
   const timer = import.meta.env.VITE_APP_MS ?? 3000;
-  console.log(timer)
+  console.log(import.meta.env)
+  console.log(process.env)
 
   const hideElement = (selector: string) => {
     const panel = document.querySelector(selector);
