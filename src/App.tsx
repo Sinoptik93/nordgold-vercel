@@ -9,6 +9,8 @@ function App() {
   const overlay = useRef<HTMLDivElement>(null);
   const loader = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(true);
+  const timer = import.meta.env.VITE_APP_MS ?? 3000;
+  console.log(timer)
 
   const hideElement = (selector: string) => {
     const panel = document.querySelector(selector);
@@ -36,7 +38,7 @@ function App() {
     }, 1000)
   }
 
-  setTimeout(closeOverlay, 4000);
+  setTimeout(closeOverlay, timer);
 
   return (
       <>
